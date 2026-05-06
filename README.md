@@ -33,21 +33,33 @@ Sobreposição de trajetos
 📱 Funcionalidades
 
 🔐 Autenticação
+
 Login com e-mail e senha
+
 Cadastro de usuários
+
 🏁 Gerenciamento de Pistas
+
 Upload de imagens
+
 Armazenamento local
 
 🧭 Processamento de Pista
+
 Conversão para grayscale
+
 Detecção de contornos
+
 Destaque do trajeto ideal
 
 📷 Captura de Trajeto
+
 Uso da câmera em tempo real
+
 Identificação do robô
+
 Desenho do percurso (linha verde)
+
 Sobreposição com a pista (linha vermelha)
 
 📊 Avaliação
@@ -86,18 +98,24 @@ RoboDetect/
 
 ⚠️ Requisitos
 Android 8.0 ou superior
+
 Câmera funcional
+
 Iluminação no ambiente de utilização suficiente para a câmera capturar o robô
+
 Dispositivo fixo (uso de suporte recomendado)
+
 ⚠️ Movimentações no dispositivo comprometem a precisão da análise.
 
 📈 Benefícios
+
 Avaliação mais precisa
 Redução de erros humanos
 Registro auditável
 Suporte à decisão dos juízes
 
 🔮 Melhorias Futuras
+
 Cálculo automático de pontuação
 Integração com sistemas da OBR
 Uso de IA para análise avançada
