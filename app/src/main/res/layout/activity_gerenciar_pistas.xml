@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GerenciarPistasActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewPistaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Pistas"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Lista de Pistas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPistas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewPistaTitle"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutBotoesPista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_pista" />
+
+    <!-- Botões principais -->
+    <LinearLayout
+        android:id="@+id/linearLayoutBotoesPista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/buttonVoltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/buttonAdicionarPista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Adicionar"
+            android:backgroundTint="#EB5FD7FD"
+            app:icon="@android:drawable/ic_input_add"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/buttonExcluirPista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Excluir"
+            android:visibility="gone"
+            android:textColor="#EBA40718"
+            app:icon="@android:drawable/ic_menu_delete"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <!-- Botão "Iniciar Captura" -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttonIniciarCaptura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Iniciar Captura"
+        android:visibility="gone"
+        app:icon="@android:drawable/ic_media_play"
+        android:backgroundTint="#EB5FD7FD"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutBotoesPista"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Botão Voltar fixo no rodapé -->
+    <Button
+        android:id="@+id/buttonVoltar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textColor="#EB5FD7FD"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

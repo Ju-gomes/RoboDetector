@@ -1,0 +1,10 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file
+plugins {
+    // Versão estável do Plugin do Android
+    id("com.android.application") version '8.9.2' apply false
+    // Versão estável do Kotlin compatível com o AGP 8.4.1
+    id("org.jetbrains.kotlin.android") version "2.2.21" apply false
+    // Plugin do Google Services
+    id("com.google.gms.google-services") version "4.4.4" apply false
+}
